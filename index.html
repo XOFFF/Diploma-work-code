@@ -1,0 +1,54 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <title>Draw app</title>
+    <link rel="stylesheet" href="master.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="toolbar">
+        <div id="toolbar__left">
+            <div class="rangeDiv">
+                <p>Radius :</p>
+                <input id="radval" class="smallInput" type="text" value="20">
+                <input id='radiusRange' class="range" type="range" name="radSize" min="1" max="100" value="20">
+            </div>
+            <div id="brushes">
+                <p>Brushes :</p>
+                <div id="circle" class="brushType act">Circle</div>
+                <div id="square" class="brushType">Square</div>
+            </div>
+            <div class="rangeDiv" >
+                <p>Text :</p> 
+                <input id="textSize" class="smallInput" type="text" value="50">
+                <input id="textRange" class="range" type="range" name="textSize" min="5" max="500" value="50">
+                <div id="text">Add text</div>
+            </div>
+            
+        </div>
+        <div id="toolbar__right">
+            
+            <div id="chooseColor">
+                <input id="colorRange" type="color">
+            </div>
+            <div id="save">
+                <iframe id="downloadframe"></iframe>
+                Save
+            </div>
+        </div>
+    </div>
+
+    <span id="someText" contenteditable>Add text</span>
+        
+    <canvas id="canvas">
+        Sorry, your browser is not supporting canvas technology. Please, update your web-browser and enjoy the drawing! ^.^
+    </canvas>
+    
+    <script src="main.js"></script>
+    <script src="radius.js"></script>
+    <script src="brushes.js"></script>
+    <script src="colors.js"></script>
+    <script src="save.js"></script>
+    <script src="text.js"></script>
+</body>
+</html>
